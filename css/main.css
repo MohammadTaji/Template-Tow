@@ -29,7 +29,7 @@ ul{
 }
 
 .container{
-    padding: 0 px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 
@@ -56,6 +56,51 @@ ul{
 
 
 /* End Global Rules */
+
+/* Start Components */
+
+.section-head h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: normal;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.section-head h2::after{
+    content: '';
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: solid 2px #333;
+    background-color: #fff;
+    position: absolute;
+    bottom: -38px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-head h2::before{
+    content: '';
+    width: 120px;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-head p{
+    width: 550px;
+    text-align: center;
+    max-width: 100%;
+    line-height: 2;
+    color: #777;
+    margin: 0 auto 100px;
+}
+
+/* End Components */
 
 /* Start Header */
 header{
@@ -247,3 +292,49 @@ header nav ul li a.active, header nav ul li a:hover{
 }
 
 /* End Landing */
+
+/* Start Services */
+
+.services {
+    padding-top : var(--section-padding) ;
+    padding-bottom : var(--section-padding) ;
+}
+
+@media (min-width:768px) {
+    .services .container .contact{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(450px,1fr));
+        row-gap: 60px;
+        column-gap: 40px;
+    }
+}
+
+
+.services .container .contact .box{
+    display: flex;
+}
+
+.services .container .contact .box i{
+    margin-right:50px ;
+}
+.services .container .contact .box .text h3{
+    color: var(--main-color);
+    margin-bottom: 30px;
+}
+
+.services .container .contact .box .text p{
+    line-height: 2;
+    color: #777;
+}
+
+@media (max-width:767px) {
+    .services .container .contact .box{
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .services .container .contact .box i{
+        margin:0 0 30px;
+    }
+}
+/* End Services */
