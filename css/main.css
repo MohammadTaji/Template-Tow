@@ -65,6 +65,7 @@ ul{
     font-weight: normal;
     position: relative;
     margin-bottom: 70px;
+    text-transform: uppercase;
 }
 
 .section-head h2::after{
@@ -409,3 +410,94 @@ header nav ul li a.active, header nav ul li a:hover{
 }
 
 /* End Design */
+
+/* Start Portfolio */
+
+.portfolio {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.portfolio .container .port-links{
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio .container .port-links li{
+    text-transform: capitalize;
+    padding: 10px;
+}
+
+.portfolio .container .port-links li.act{
+    background: var(--main-color);
+    color: #fff;
+}
+
+.portfolio .gallary{
+    padding-top: 60px ;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%,1fr));
+}
+
+@media (max-width:1199px) {
+    .portfolio .gallary{
+        grid-template-columns: repeat(auto-fill, minmax(50%,1fr));
+    }
+}
+
+@media (max-width:767px) {
+    .portfolio .gallary{
+        grid-template-columns: repeat(auto-fill, minmax(100%,1fr));
+    }
+}
+
+.portfolio .gallary .port-box{
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio .gallary .port-box img{
+    width: 100%;
+    transition: 0.3s;
+}
+
+.portfolio .gallary .port-box:hover>img{
+    transform: rotate(3deg) scale(1.1);
+}
+
+.portfolio .gallary .port-box .port-text{
+    padding: 20px;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    transition: 0.3s;
+}
+
+.portfolio .gallary .port-box .port-text h4{
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.portfolio .gallary .port-box .port-text p{
+    color: var(--main-color);
+}
+
+.portfolio .gallary .port-box:hover >.port-text{
+    bottom: 0;
+}
+
+.portfolio .more{
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    margin-top: 30px;
+    background-color: var(--main-color);
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* End Portfolio */
