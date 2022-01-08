@@ -572,3 +572,229 @@ header nav ul li a.active, header nav ul li a:hover{
 }
 
 /* End About */
+
+/* Start Stats */
+
+.stats{
+    background-image: url(../images/stats.png);
+    background-size: cover;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+}
+
+.stats::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0,70%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.stats .container{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.stats .container .sta-box{
+    background-color: var(--transparent-color);
+    flex-basis: 25%;
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+@media (max-width:991px) {
+    .stats .container .sta-box{
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width:767px) {
+    .stats .container .sta-box{
+        flex-basis: 100%;
+    }
+}
+
+.stats .container .sta-box i{
+    padding: 12px;
+    background-color:#000;
+    border-radius: 50%;
+    margin: 20px 0 30px;
+}
+
+.stats .container .sta-box .num{
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.stats .container .sta-box p{
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+/* End Stats */
+
+/* Start Skills */
+
+.skills{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.skills .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media (min-width:991px) {
+    .skills .container .ski-box{
+        flex-basis: 45%;
+    }
+}
+
+.skills .container .ski-box h3{
+    text-align: center;
+    font-weight: normal;
+}
+
+.skills .container .ski-box>p{
+    text-align: center;
+    color: #777;
+    line-height: 2;
+    margin: 30px 0 60px;
+}
+
+.skills .container .ski-box .person{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+
+.skills .container .ski-box .person img{
+    border-radius: 50%;
+    width: 100px;
+    margin-right: 50px;
+}
+
+.skills .container .ski-box .person .text{
+    line-height: 1.8;
+    border-bottom: solid #ccc 1px;
+}
+
+.skills .container .ski-box .person .text p{
+    color: #777;
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+@media (max-width:767px) {
+    .skills .container .ski-box .person{
+        flex-direction: column;
+        text-align: center;
+    }
+    .skills .container .ski-box .person img{
+        margin: 0 auto 20px;
+    }
+}
+.skills .container .ski-box ul{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.skills .container .ski-box ul li{
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: solid 1px #acacac;
+}
+
+.skills .container .ski-box ul li.act{
+    background-color: var(--main-color);
+    border: var(--main-color);
+}
+
+.skills .container .ski-box h4{
+    font-weight: normal;
+}
+
+.skills .container .ski-box .prog{
+    height: 30px;
+    background-color: #dedadc;
+    margin: 15px 0 40px;
+}
+
+.skills .container .ski-box .prog span{
+    height: 100%;
+    background-color: var(--main-color);
+    display: block;
+    position: relative;
+}
+
+.skills .container .ski-box .prog span::before{
+    content: '';
+    border: solid 8px transparent;
+    border-top-color:#000 ;
+    position: absolute;
+    top: -15px;
+    right: -8px;
+}
+
+.skills .container .ski-box .prog span::after{
+    content: attr(data-progres);
+    width: 40px;
+    padding: 4px 0;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    border-radius: 4px;
+    position: absolute;
+    top: -40px;
+    right: -18px;
+}
+
+/* End Skills */
+
+/* Start Quote */
+
+.quote{
+    background-image: url(../images/quote.jpg);
+    background-size: cover;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+}
+
+.quote::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0,75%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.quote .container {
+    color: #fff;
+    position: relative;
+    text-align: center;
+}
+
+.quote .container q{
+    font-size: 30px;
+}
+.quote .container span{
+    display: block;
+    margin-top: 20px;
+}
+
+/* End Quote */
