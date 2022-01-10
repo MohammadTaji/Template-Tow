@@ -302,7 +302,7 @@ header nav ul li a.active, header nav ul li a:hover{
 }
 
 @media (min-width:768px) {
-    .services .container .contact{
+    .services .container .ser-cont{
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(450px,1fr));
         row-gap: 60px;
@@ -311,30 +311,30 @@ header nav ul li a.active, header nav ul li a:hover{
 }
 
 
-.services .container .contact .box{
+.services .container .ser-cont .box{
     display: flex;
 }
 
-.services .container .contact .box i{
+.services .container .ser-cont .box i{
     margin-right:50px ;
 }
-.services .container .contact .box .text h3{
+.services .container .ser-cont .box .text h3{
     color: var(--main-color);
     margin-bottom: 30px;
 }
 
-.services .container .contact .box .text p{
+.services .container .ser-cont .box .text p{
     line-height: 2;
     color: #777;
 }
 
 @media (max-width:767px) {
-    .services .container .contact .box{
+    .services .container .ser-cont .box{
         flex-direction: column;
         text-align: center;
         margin-bottom: 40px;
     }
-    .services .container .contact .box i{
+    .services .container .ser-cont .box i{
         margin:0 0 30px;
     }
 }
@@ -798,3 +798,270 @@ header nav ul li a.active, header nav ul li a:hover{
 }
 
 /* End Quote */
+
+/* Start Pricing */
+
+.pricing{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    text-align: center;
+}
+
+.pricing .container .plans{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 30px;
+}
+
+.pricing .container .plans .plan{
+    background-color: #fcfcfc;
+    border-top: solid 1px var(--main-color);
+}
+
+.pricing .container .plans .plan .head{
+    padding: 40px 20px;
+}
+
+.pricing .container .plans .plan .head h3{
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.pricing .container .plans .plan .head .num{
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.pricing .container .plans .plan .head .num::before{
+    content: "$";
+    font-size: 25px;
+    position: relative;
+    top: -40px;
+    margin-right: 15px;
+    font-weight: normal;
+}
+
+
+.pricing .container .plans .plan .head .num::after{
+    content: "/Mo";
+    font-size: 20px;
+    position: relative;
+    right: -15px;
+}
+
+.pricing .container .plans .plan .featur{
+    border-top: solid 1px var(--main-color);
+    border-bottom: solid 1px var(--main-color);
+}
+
+.pricing .container .plans .plan .featur ul li{
+    padding: 20px;
+    position: relative;
+}
+
+.pricing .container .plans .plan .featur ul li:not(:last-child)::after{
+    content: '';
+    width: 140px;
+    height: 1px;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pricing .container .plans .plan .link a{
+    padding: 20px;
+    margin: 30px;
+    text-decoration: none;
+    display: inline-block;
+    border: solid 1px var(--main-color);
+}
+
+.pricing .container>p{
+    margin: 50px auto 20px;
+    font-size: 20px;
+}
+
+.pricing .container>a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 30px;
+    margin: 20px auto;
+    width: fit-content;
+    background-color: var(--main-color);
+}
+
+/* End Pricing */
+
+/* Start Subscribe */
+
+.subscribe{
+    background-image: url(../images/subscribe.jpg);
+    background-size: cover;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+}
+
+.subscribe::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0,50%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.subscribe .container{
+    position: relative;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width:991px) {
+    .subscribe .container{
+        flex-direction: column;
+    }
+}
+
+.subscribe .container form{
+    width: 500px;
+    max-width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.subscribe .container form ::placeholder{
+    color: #fff;
+}
+
+.subscribe .container form i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 25px;
+}
+
+.subscribe .container input[type='email']{
+    padding: 20px 20px 20px 60px;
+    background: none;
+    border: solid 1px #fff;
+    border-right: none;
+    outline: none;
+    width: calc(100% - 130px);
+}
+
+.subscribe .container input[type='submit']{
+    border: solid 1px #fff;
+    border-left: none;
+    color: #fff;
+    background-color: var(--main-color);
+    width: 130px;
+    padding: 10px 20px;
+    text-transform: uppercase
+}
+
+.subscribe .container p{
+    line-height: 2;
+    margin-left: 50px;
+}
+
+@media (max-width:991px) {
+    .subscribe .container p{
+        margin: 30px 0 0;
+    }
+}
+/* End Subscribe */
+
+/* Start Contact */
+.contact{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.contact .container .content{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width:767px) {
+    .contact .container .content{
+        flex-direction: column-reverse;
+    }
+}
+
+.contact .container .content form{
+    flex-basis: 70%;
+}
+
+.contact .container .content form .text-in{
+    width: 100%;
+    display: block;
+    outline: none;
+    border: solid 1px #ccc;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.contact .container .content form textarea.text-in{
+    height: 200px;
+}
+
+.contact .container .content form input[type='submit']{
+    display: flex;
+    color: #fff;
+    background-color: var(--main-color);
+    border: none;
+    text-transform: uppercase;
+    padding: 20px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.contact .container .content .info{
+    flex-basis: 25%;
+}
+
+.contact .container .content .info h4{
+    font-size: 18px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.contact .container .content .info h4:last-of-type{
+    margin-top: 90px;
+}
+
+@media (max-width:767px) {
+    .contact .container .content .info {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .contact .container .content .info h4:last-of-type{
+        margin-top: 30px;
+    }
+}
+
+.contact .container .content .info span
+,.contact .container .content .info address{
+    display: block;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.contact .container .content .info address {
+    line-height: 2;
+}
+@media (max-width:767px) {
+    .contact .container .content .info address{
+        margin-bottom: 40px;
+    }
+}
+/* Start Contact */
