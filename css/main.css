@@ -1065,3 +1065,61 @@ header nav ul li a.active, header nav ul li a:hover{
     }
 }
 /* Start Contact */
+
+/* Start Footer */
+
+footer{
+    background-image: url(../images/subscribe.jpg);
+    background-size: cover;
+    padding-top: calc(var(--section-padding) / 2);
+    padding-bottom: calc(var(--section-padding) / 2);
+    color: #fff;
+    position: relative;
+}
+
+footer::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0,70%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+footer .container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .container .image{
+    flex-basis: 60px;
+}
+
+footer .container h3{
+    font-size: 22px;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 20px;
+    margin: 20px 0;
+    border-bottom: solid #fff 1px;
+}
+
+footer .container ul{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+footer .container ul li{
+    padding:10px 17px;
+}
+
+footer .container p span{
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+/* End Footer */
